@@ -1,0 +1,25 @@
+.statusbadge {
+  padding: 8px 16px;
+  border-radius: 40px;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;  
+  letter-spacing: 0.02em;
+}
+
+.pending {
+  background: #fff7e6;
+  color: #ff9900;
+}
+
+.done{
+  background: #ebf9f5;
+  color: #3eaa86;
+}
+
+.failed {
+  background: #fdf4f7;
+  color: #b93e5c;
+}

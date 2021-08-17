@@ -1,0 +1,17 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableheading {
+  text-align: start;
+  border-bottom: 1px solid #e8eef1;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  padding: 16px;
+  color: #758393;
+}

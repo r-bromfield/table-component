@@ -1,0 +1,55 @@
+.row td {
+  /* border-bottom: 1.42283px solid rgba(232, 233, 235, 0.4); */
+  padding: 16px;
+}
+
+.row:active{
+  border-left: 3px solid #0F6FDE;
+  background-color: #F7F9FC;
+}
+
+
+.employeeName {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#icon {
+  color: #768699;
+  margin-right: 5.69px;
+}
+
+.deptitem {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  display: inline-flex;
+  margin-right: 16px;
+}
+
+.dot-pending {
+  background: #ff9900;
+}
+
+.dot-done {
+  background: #3eaa86;
+}
+
+.dot-failed {
+  background: #b93e5c;
+}
+
+.withcheck{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+
