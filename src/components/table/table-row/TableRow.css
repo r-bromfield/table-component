@@ -3,11 +3,12 @@
   padding: 16px;
 }
 
-.row:active{
-  border-left: 3px solid #0F6FDE;
-  background-color: #F7F9FC;
-}
 
+.selected {
+  box-sizing: border-box;
+  border-left: 3px solid #0f6fde; 
+  background-color: #f7f9fc;
+}
 
 .employeeName {
   display: flex;
@@ -45,11 +46,14 @@
   background: #b93e5c;
 }
 
-.withcheck{
+.withcheck {
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-grow: unset;
 }
 
-
-
+.sel{
+  /* removing space added by border when row is selected */
+ margin-left: -1.5px;
+}

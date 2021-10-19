@@ -6,10 +6,12 @@ import designIcon from "../../../assets/icons/Pen Tool.svg";
 import supportIcon from "../../../assets/icons/Call.svg";
 import Avatar from "../../avatar/Avatar";
 import CheckBox from "../../checkbox/CheckBox";
+import { useState } from "react";
 
 const TableRow = (props) => {
   let dotClasses = "";
   let statusClasses = "";
+  let rowClasses = "";
   let icon = "";
 
   switch (props.payStatus) {
@@ -45,12 +47,24 @@ const TableRow = (props) => {
       break;
   }
 
+  const [ isChecked, setIsChecked ] = useState(props.isChecked);
+  function handelClick() {
+    setIsChecked(!isChecked);
+  }
+
+  if (isChecked) {
+    rowClasses = "row selected";
+  } else {
+    rowClasses = "row";
+    
+  }
+  console.log(rowClasses);
   return (
-    <tr className="row">
+    <tr className={`row ${isChecked ? "selected" : ""}`}>
       <td className="first">
-        <span className="withcheck">
-          <CheckBox />
-          <Avatar id={props.id} employee={props.employee} />
+        <span className={`withcheck ${isChecked ? "sel" : ""}`}  >
+          <CheckBox isChecked={isChecked} onClick={handelClick} />
+          <Avatar id={props.id} employee={props.employee} className={`row ${isChecked ? "selected" : ""}`} />
           {props.employee}
         </span>
       </td>

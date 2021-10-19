@@ -1,11 +1,12 @@
 import "./CheckBox.css";
 import { ReactComponent as CheckIcon } from "../../assets/icons/Check.svg";
 
-const CheckBox = () => {
+const CheckBox = (props) => {  
+ 
       return (    
-      <span >
-        <input type="checkbox"/>
-        {/* <CheckIcon className='checkIcon'/> */}
+      <span onClick={props.onClick}>
+        <input type="checkbox" checked={props.isChecked} />
+         {/* <CheckIcon className='checkIcon'/> */} 
       </span>    
   );
 };

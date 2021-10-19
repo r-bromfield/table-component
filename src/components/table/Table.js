@@ -3,20 +3,25 @@ import "./Table.css";
 import TableTop from "./table-top/TableTop";
 import TableRow from "./table-row/TableRow";
 import CheckBox from "../checkbox/CheckBox";
-
+import { useState } from "react";
 
 const Table = (props) => {
+  const [isAllChecked, setIsAllChecked] = useState(false);
+
+  function handelClick() {
+    setIsAllChecked(!isAllChecked);
+    console.log(isAllChecked);
+  }
   return (
     <div>
       <TableTop />
-     
+
       <table className="table">
         <tr>
           <th className="tableheading first">
-         
             {
-              <span className='withcheck'>
-                <CheckBox/> Employee
+              <span className="withcheck">
+                <CheckBox id="masterCheck" onClick={handelClick} /> Employee
               </span>
             }
           </th>
@@ -35,6 +40,7 @@ const Table = (props) => {
             paydate={rowitem.paydate}
             payStatus={rowitem.payStatus}
             details={rowitem.details}
+            isChecked={isAllChecked}
           />
         ))}
       </table>
